@@ -4,12 +4,12 @@
 
 Ce petit projet documente la communication sans fil entre une commande de drone utilisant un ESP32 et un module NRF24L01, et un drone contrôlé par un ESP32 avec un autre module NRF24L01. L'objectif est d'assurer une transmission fiable des commandes depuis la télécommande vers le drone en utilisant le protocole RF24 et SPI .
 
-**Matériels Utilisés:** 
+## Matériel Utilisé
 
--2 x NRF24L01
--Joystick de la carte SM-217-BKT V5
--ESP32 (tr) + ESP32 (re)
--NRF24L01
+- 2 x NRF24L01
+- Joystick de la carte SM-217-BKT V5
+- ESP32 (Émetteur) + ESP32 (Récepteur)
+- NRF24L01
 
 **Schéma de Connexion** : 
 
