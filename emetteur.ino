@@ -3,8 +3,8 @@
 #include <RF24.h>
 
 // Définition des broches pour le module nRF24L01 (adapté pour Arduino Nano)
-#define CE_PIN 9
-#define CSN_PIN 10
+#define CE_PIN 4
+#define CSN_PIN 5
 
 RF24 radio(CE_PIN, CSN_PIN);
 const byte adresse[6] = "00001"; // Adresse de communication
