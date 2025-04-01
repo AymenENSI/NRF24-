@@ -10,6 +10,7 @@ Ce projet documente la communication sans fil entre une commande de drone utilis
 -NRF24L01
 
 **Schéma de Connexion** : 
+
 ![Nom de l'image](cablage.png)
 
 
