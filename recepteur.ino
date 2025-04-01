@@ -6,7 +6,8 @@
 #define CSN_PIN 5
 
 RF24 radio(CE_PIN, CSN_PIN);
-const byte adresse[6] = "00001"; // Adresse de communication
+// Adresse de communication
+const byte adresse[6] = "00001"; 
 
 // Structure des commandes reçues
 struct Commande {
@@ -62,5 +63,4 @@ void loop() {
     Serial.println(" Échec de réception !");
   }
 
-  delay(100); // Pause de 100ms pour éviter de saturer l'affichage
 }
