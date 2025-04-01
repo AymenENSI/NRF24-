@@ -1,8 +1,8 @@
-## Communication NRF24L01 entre Arduino Nano (Commande) et ESP32 (Drone)
+## Communication entre deux NRF24L01 
 
 **Introduction :**  
 
-Ce projet documente la communication sans fil entre une commande de drone utilisant un Arduino Nano et un module NRF24L01, et un drone contrôlé par un ESP32 avec un autre module NRF24L01. L'objectif est d'assurer une transmission fiable des commandes depuis la télécommande vers le drone en utilisant le protocole RF24.
+Ce petit projet documente la communication sans fil entre une commande de drone utilisant un ESP32 et un module NRF24L01, et un drone contrôlé par un ESP32 avec un autre module NRF24L01. L'objectif est d'assurer une transmission fiable des commandes depuis la télécommande vers le drone en utilisant le protocole RF24 et SPI .
 
 **Matériels Utilisés:** 
 
