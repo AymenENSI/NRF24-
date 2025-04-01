@@ -2,12 +2,13 @@
 #include <nRF24L01.h>
 #include <RF24.h>
 
-// Définition des broches pour le module nRF24L01 (adapté pour Arduino Nano)
+// Définition des broches pour le module nRF24L01 (adapté pour ESP32 )
 #define CE_PIN 4
 #define CSN_PIN 5
 
 RF24 radio(CE_PIN, CSN_PIN);
-const byte adresse[6] = "00001"; // Adresse de communication
+// Adresse de communication
+const byte adresse[6] = "00001"; 
 
 // Structure contenant les valeurs des joysticks
 struct Commande {
@@ -20,9 +21,8 @@ struct Commande {
 Commande commande;
 
 void setup() {
-  Serial.begin(115200); // Démarrer la communication série
-  
-  SPI.begin(); // Initialisation du SPI pour Arduino Nano
+  // Démarrer la communication série
+  Serial.begin(115200); 
   
   if (!radio.begin()) {
     Serial.println("Erreur : Module nRF24L01 non détecté !");
@@ -47,13 +47,12 @@ void loop() {
   commande.joystick2X = analogRead(A2); // Axe X du second joystick
   commande.joystick2Y = analogRead(A3); // Axe Y du second joystick
 
-  // Affichage des valeurs sur le moniteur série
   Serial.print("J1X: "); Serial.print(commande.joystick1X);
   Serial.print(" | J1Y: "); Serial.print(commande.joystick1Y);
   Serial.print(" | J2X: "); Serial.print(commande.joystick2X);
   Serial.print(" | J2Y: "); Serial.print(commande.joystick2Y);
   
-  // Envoi des données via nRF24L01
+  // Envoi des données prises de la commande via nRF24L01
   bool ok = radio.write(&commande, sizeof(commande));
 
   if (ok) {
